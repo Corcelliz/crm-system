@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2e30">
+  <title>CRM System</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <script type="module" src="/assets/js/colaborador.js"></script>
+</head>
+<body>
+  <div class="app" data-area="colaborador">
+    <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+      <div class="sidebar__brand">
+        <img src="/assets/img/logo-mark.svg" alt="" width="34" height="34">
+        <div><strong>CRM System</strong><span id="companyName">&nbsp;</span></div>
+      </div>
+
+      <nav class="nav" aria-label="Seções">
+        <a class="nav__link" href="#/inicio" data-route="inicio"><span data-icon="today"></span>Meu dia</a>
+        <a class="nav__link" href="#/funil" data-route="funil"><span data-icon="board"></span>Funil de vendas</a>
+        <a class="nav__link" href="#/clientes" data-route="clientes"><span data-icon="building"></span>Clientes</a>
+        <a class="nav__link" href="#/tarefas" data-route="tarefas"><span data-icon="tasks"></span>Tarefas<span class="nav__count num" id="navTaskCount" hidden></span></a>
+      </nav>
+
+      <div class="sidebar__foot">
+        <a class="nav__link" href="/admin" id="switchArea" hidden><span data-icon="swap"></span>Área do administrador</a>
+        <button type="button" class="userchip" id="userMenuBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do usuário"></button>
+      </div>
+    </aside>
+    <div class="sidebar-scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button type="button" class="btn btn--ghost btn--icon topbar__menu" id="menuBtn" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button>
+        <h1 class="topbar__title" id="pageTitle">Meu dia</h1>
+        <div class="topbar__actions">
+          <form class="input-search topbar__search" id="quickSearch" role="search">
+            <span data-icon="search"></span>
+            <label class="sr-only" for="quickSearchInput">Buscar clientes</label>
+            <input class="input" id="quickSearchInput" type="search" placeholder="Buscar clientes" autocomplete="off">
+          </form>
+          <button type="button" class="btn btn--ghost btn--icon" id="themeToggle" aria-label="Alternar tema"></button>
+        </div>
+      </header>
+      <main id="view" class="view" tabindex="-1"></main>
+    </div>
+  </div>
+</body>
+</html>

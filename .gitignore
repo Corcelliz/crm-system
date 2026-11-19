@@ -1,0 +1,8 @@
+node_modules/
+data/
+.env
+*.log
+
+# Ferramentas locais do Claude (não fazem parte do produto)
+.claude/
+skills-lock.json

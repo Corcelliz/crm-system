@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2e30">
+  <title>Administração · CRM System</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <script type="module" src="/assets/js/admin.js"></script>
+</head>
+<body>
+  <div class="app" data-area="admin">
+    <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+      <div class="sidebar__brand">
+        <img src="/assets/img/logo-mark.svg" alt="" width="34" height="34">
+        <div><strong>CRM System</strong><span id="companyName">&nbsp;</span></div>
+      </div>
+      <span class="area-tag">Administração</span>
+
+      <nav class="nav" aria-label="Seções">
+        <span class="nav__group">Painel</span>
+        <a class="nav__link" href="#/visao" data-route="visao"><span data-icon="chart"></span>Visão geral</a>
+
+        <span class="nav__group">Operação comercial</span>
+        <a class="nav__link" href="#/oportunidades" data-route="oportunidades"><span data-icon="briefcase"></span>Oportunidades</a>
+        <a class="nav__link" href="#/clientes" data-route="clientes"><span data-icon="building"></span>Clientes</a>
+        <a class="nav__link" href="#/tarefas" data-route="tarefas"><span data-icon="tasks"></span>Tarefas</a>
+
+        <span class="nav__group">Governança</span>
+        <a class="nav__link" href="#/usuarios" data-route="usuarios"><span data-icon="users"></span>Usuários</a>
+        <a class="nav__link" href="#/auditoria" data-route="auditoria"><span data-icon="list"></span>Auditoria</a>
+        <a class="nav__link" href="#/seguranca" data-route="seguranca"><span data-icon="shield"></span>Segurança<span class="nav__count num" id="navLockCount" hidden></span></a>
+        <a class="nav__link" href="#/configuracoes" data-route="configuracoes"><span data-icon="sliders"></span>Configurações</a>
+      </nav>
+
+      <div class="sidebar__foot">
+        <a class="nav__link" href="/colaborador"><span data-icon="swap"></span>Área do colaborador</a>
+        <button type="button" class="userchip" id="userMenuBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do usuário"></button>
+      </div>
+    </aside>
+    <div class="sidebar-scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <div class="maintenance-banner" id="maintenanceBanner" role="status" hidden>
+        <span data-icon="power"></span>
+        <span>Modo manutenção ativo: colaboradores não conseguem entrar. Desative em Configurações quando terminar.</span>
+      </div>
+      <header class="topbar">
+        <button type="button" class="btn btn--ghost btn--icon topbar__menu" id="menuBtn" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button>
+        <h1 class="topbar__title" id="pageTitle">Visão geral</h1>
+        <div class="topbar__actions">
+          <button type="button" class="btn btn--ghost btn--icon" id="themeToggle" aria-label="Alternar tema"></button>
+        </div>
+      </header>
+      <main id="view" class="view" tabindex="-1"></main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Acesso ao CRM System: funil de vendas, carteira de clientes e agenda da equipe comercial.">
+  <meta name="theme-color" content="#0f3d3e">
+  <title>Entrar · CRM System</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/login.css">
+  <script type="module" src="/assets/js/login.js"></script>
+</head>
+<body class="login">
+  <div class="login__layout">
+
+    <!-- Apresentação: o funil comercial em movimento -->
+    <section class="stage" aria-labelledby="stage-title">
+      <header class="stage__brand">
+        <img src="/assets/img/logo-mark.svg" alt="" width="36" height="36">
+        <span>CRM System</span>
+      </header>
+
+      <div class="stage__copy">
+        <h1 id="stage-title">Do primeiro contato ao contrato assinado.</h1>
+        <p>Funil, carteira de clientes e agenda da equipe comercial no mesmo lugar, com o histórico de cada conversa.</p>
+      </div>
+
+      <figure class="pipe" id="pipeline" aria-label="Ilustração: oportunidades avançando pelos estágios do funil até o fechamento">
+        <div class="pipe__head" aria-hidden="true">
+          <span class="pipe__stage">Prospecção</span>
+          <span class="pipe__stage">Qualificação</span>
+          <span class="pipe__stage">Proposta</span>
+          <span class="pipe__stage">Negociação</span>
+          <span class="pipe__stage pipe__stage--won">Ganho <strong class="pipe__total num" data-won-total>R$ 0</strong></span>
+        </div>
+        <div class="pipe__body" aria-hidden="true"></div>
+        <figcaption class="pipe__caption">Simulação ilustrativa. Os valores reais da sua equipe aparecem depois do login.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Acesso -->
+    <main class="access">
+      <button type="button" class="btn btn--ghost btn--icon access__theme" id="themeToggle" aria-label="Alternar tema claro e escuro"></button>
+
+      <div class="access__inner">
+        <div class="access__mobile-brand">
+          <img src="/assets/img/logo-mark.svg" alt="" width="32" height="32">
+          <span>CRM System</span>
+        </div>
+
+        <h2 class="access__title">Entrar</h2>
+        <p class="access__lead">Use o e-mail corporativo e a senha cadastrados pelo administrador.</p>
+
+        <div class="notice" id="notice" role="status" hidden></div>
+
+        <form class="access__form" id="loginForm" autocomplete="on">
+          <div class="field">
+            <label class="field__label" for="email">E-mail</label>
+            <input class="input input--lg" id="email" name="email" type="email" inputmode="email" autocomplete="username" placeholder="nome@empresa.com.br" required spellcheck="false" autocapitalize="off">
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="password">Senha</label>
+            <div class="input-group">
+              <input class="input input--lg" id="password" name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required>
+              <button type="button" class="input-group__addon" id="togglePassword" aria-label="Mostrar senha" aria-pressed="false"></button>
+            </div>
+            <p class="field__hint field__hint--warn" id="capsHint" hidden>Caps Lock está ativado.</p>
+          </div>
+
+          <div class="access__row">
+            <label class="check"><input type="checkbox" id="remember" name="remember"> Manter conectado neste dispositivo</label>
+            <button type="button" class="link" id="forgotBtn">Esqueci a senha</button>
+          </div>
+
+          <div class="form-error" id="formError" role="alert" hidden></div>
+
+          <button class="btn btn--primary btn--lg btn--block" type="submit" id="submitBtn">Entrar</button>
+        </form>
+
+        <section class="demo" aria-labelledby="demo-title">
+          <h3 class="demo__title" id="demo-title">Contas de demonstração</h3>
+          <p class="demo__text">Escolha uma conta para preencher o formulário.</p>
+          <ul class="demo__list">
+            <li>
+              <button type="button" class="demo__btn" data-email="admin@crmsystem.com.br" data-password="Admin@2026">
+                <span class="avatar" data-avatar="Marina Albuquerque">MA</span>
+                <span class="demo__who">
+                  <strong>Marina Albuquerque</strong>
+                  <small>admin@crmsystem.com.br</small>
+                  <small>Senha: <code>Admin@2026</code></small>
+                </span>
+                <span class="badge badge--brass badge--plain">Administrador</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="demo__btn" data-email="ana.souza@crmsystem.com.br" data-password="Colab@2026">
+                <span class="avatar" data-avatar="Ana Souza">AS</span>
+                <span class="demo__who">
+                  <strong>Ana Souza</strong>
+                  <small>ana.souza@crmsystem.com.br</small>
+                  <small>Senha: <code>Colab@2026</code></small>
+                </span>
+                <span class="badge badge--brand badge--plain">Colaborador</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <footer class="access__legal">CRM System. Ambiente de demonstração com dados fictícios.</footer>
+    </main>
+  </div>
+</body>
+</html>
