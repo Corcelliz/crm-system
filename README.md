@@ -3,6 +3,13 @@
 Sistema de CRM completo com **login autenticado no servidor**, **área do colaborador** e **área do administrador**.
 Back-end em Node.js + Express com banco SQLite nativo; front-end em HTML, CSS e JavaScript puros (sem etapa de build).
 
+## Tecnologias
+
+- **Back-end:** Node.js 22, Express 5, SQLite nativo (`node:sqlite`), JWT em cookie `httpOnly`, Helmet
+- **Front-end:** HTML, CSS e JavaScript (módulos ES) puros, sem framework e sem build
+- **Segurança:** hash de senha com scrypt, proteção CSRF, bloqueio por tentativas de login, auditoria de ações
+- **Dados:** base de demonstração 100% fictícia, gerada por `npm run seed`
+
 ## Como rodar
 
 Requisito: **Node.js 22.13 ou superior** (usa o módulo `node:sqlite`, nativo do Node).
