@@ -10,6 +10,46 @@ Back-end em Node.js + Express com banco SQLite nativo; front-end em HTML, CSS e 
 - **Segurança:** hash de senha com scrypt, proteção CSRF, bloqueio por tentativas de login, auditoria de ações
 - **Dados:** base de demonstração 100% fictícia, gerada por `npm run seed`
 
+## Telas
+
+Capturas feitas com a base de demonstração (dados 100% fictícios).
+
+### Login
+Validação de credenciais no servidor, bloqueio por tentativas e um funil animado na apresentação.
+
+![Tela de login com funil de vendas animado](docs/screenshots/01-login.png)
+
+### Área do colaborador
+**Meu dia:** meta do mês com marcador de ritmo esperado, agenda, fechamentos previstos e gráficos.
+
+![Meu dia: meta mensal, agenda e gráficos](docs/screenshots/02-colaborador-meu-dia.png)
+
+**Funil de vendas:** quadro com arrastar e soltar entre os estágios.
+
+![Funil de vendas em formato de quadro](docs/screenshots/03-colaborador-funil.png)
+
+**Ficha do cliente:** contatos, oportunidades, tarefas e histórico de interações.
+
+![Ficha lateral do cliente](docs/screenshots/04-colaborador-ficha-cliente.png)
+
+### Área do administrador
+**Visão geral:** receita, meta da equipe, pipeline, desempenho por colaborador e atividade do sistema.
+
+![Visão geral do administrador](docs/screenshots/05-admin-visao-geral.png)
+
+**Usuários e permissões:** criação, perfis de acesso, redefinição de senha e desativação.
+
+![Usuários e permissões](docs/screenshots/06-admin-usuarios.png)
+
+**Auditoria:** trilha de acessos e alterações, com filtros por ação, usuário e período.
+
+![Auditoria do sistema](docs/screenshots/07-admin-auditoria.png)
+
+### Tema escuro
+Todas as telas têm tema claro e escuro, que acompanha o sistema operacional.
+
+![Funil de vendas no tema escuro](docs/screenshots/08-tema-escuro-funil.png)
+
 ## Como rodar
 
 Requisito: **Node.js 22.13 ou superior** (usa o módulo `node:sqlite`, nativo do Node).
